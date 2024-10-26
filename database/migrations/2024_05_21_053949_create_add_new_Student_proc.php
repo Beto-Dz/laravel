@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up()
     {
-        DB::unprepared("CREATE DEFINER=`root`@`localhost` PROCEDURE `add_new_Student`(name VARCHAR(40), pat VARCHAR(40), mat VARCHAR(40), nac DATE, phone VARCHAR(12),
+        DB::unprepared("CREATE PROCEDURE `add_new_Student`(name VARCHAR(40), pat VARCHAR(40), mat VARCHAR(40), nac DATE, phone VARCHAR(12),
                                  usname VARCHAR(40), pass VARCHAR(200), active BOOLEAN, sex INT,
                                  num_control VARCHAR(15), tutor INT, period INT, grup INT, token VARCHAR(100))
 BEGIN
