@@ -37,7 +37,7 @@ BEGIN
 
     SET id_user = LAST_INSERT_ID();
 
-    INSERT INTO DOCENTES(cedula_prof, id_usuario)
+    INSERT INTO docentes(cedula_prof, id_usuario)
     VALUES (cedula, id_user);
 
     SET id_docent = LAST_INSERT_ID();
@@ -51,11 +51,6 @@ BEGIN
 END");
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         DB::unprepared("DROP PROCEDURE IF EXISTS add_new_Docente");

@@ -11,7 +11,7 @@ class USUARIOS_CREDENCIALES_VIEW extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = 'USUARIOS_CREDENCIALES_VIEW';
+    protected $table = 'usuarios_credenciales_view';
 
     protected $primaryKey = "id";
 

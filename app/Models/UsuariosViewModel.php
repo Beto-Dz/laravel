@@ -11,7 +11,7 @@ class UsuariosViewModel extends Model
 
     public $timestamps = false;
 
-    protected $table = 'USUARIOS_INFO_VIEW';
+    protected $table = 'usuarios_info_view';
 
     protected $primaryKey = "id";
 
