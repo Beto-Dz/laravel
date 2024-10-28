@@ -17,8 +17,7 @@ return new class extends Migration
             $table->integer('id', true);
             $table->string('cedula_prof', 20)->unique('cedula_prof');
             $table->integer('id_usuario')->index('id_usuario');
-
-            $table->primary(['id', 'id_usuario']);
+            $table->primary('id');
         });
     }
 

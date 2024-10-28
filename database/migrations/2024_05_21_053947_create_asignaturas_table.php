@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('id_periodo')->index('id_periodo');
             $table->tinyInteger('calificacion_aprobatoria');
 
-            $table->primary(['id', 'id_periodo']);
+            $table->primary('id');
         });
     }
 
