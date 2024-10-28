@@ -28,8 +28,7 @@ return new class extends Migration
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->nullable();
             $table->rememberToken();
-
-            $table->primary(['id', 'id_sexo', 'id_rol']);
+            $table->primary('id');
         });
     }
 
