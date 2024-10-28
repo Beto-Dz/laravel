@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up()
     {
-        // DB::statement("CREATE VIEW `usuarios_credenciales_view` AS select `u`.`id` AS `id`,`u`.`nombre` AS `nombre`,`u`.`nombre_usuario` AS `nombre_usuario`,`u`.`contrasena` AS `password`,`r`.`rol` AS `rol` from (`c`.`usuarios` `u` join `henry_wallon`.`roles` `r` on((`u`.`id_rol` = `r`.`id`)))");
+        // DB::statement("CREATE VIEW `usuarios_credenciales_view` AS select `u`.`id` AS `id`,`u`.`nombre` AS `nombre`,`u`.`nombre_usuario` AS `nombre_usuario`,`u`.`contrasena` AS `password`,`r`.`rol` AS `rol` from (`c`.`usuarios` `u` join `railway`.`roles` `r` on((`u`.`id_rol` = `r`.`id`)))");
         DB::statement("CREATE VIEW `usuarios_credenciales_view` AS 
     SELECT 
         `u`.`id` AS `id`, 
@@ -20,8 +20,8 @@ return new class extends Migration
         `u`.`nombre_usuario` AS `nombre_usuario`, 
         `u`.`contrasena` AS `password`, 
         `r`.`rol` AS `rol` 
-    FROM `henry_wallon`.`usuarios` `u` 
-    JOIN `henry_wallon`.`roles` `r` ON (`u`.`id_rol` = `r`.`id`)"
+    FROM `railway`.`usuarios` `u` 
+    JOIN `railway`.`roles` `r` ON (`u`.`id_rol` = `r`.`id`)"
 );
 
     }

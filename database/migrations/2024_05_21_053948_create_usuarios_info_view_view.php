@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up()
     {
-        DB::statement("CREATE VIEW `usuarios_info_view` AS select `u`.`id` AS `id`,concat(`u`.`nombre`,' ',`u`.`ap_paterno`,' ',`u`.`ap_materno`) AS `name`,`u`.`nombre_usuario` AS `username`,`u`.`activo` AS `activo`,`s`.`nombre` AS `sexo`,`r`.`rol` AS `rol` from ((`henry_wallon`.`sexos` `s` join `henry_wallon`.`usuarios` `u` on((`s`.`id` = `u`.`id_sexo`))) join `henry_wallon`.`roles` `r` on((`u`.`id_rol` = `r`.`id`))) order by `u`.`id`");
+        DB::statement("CREATE VIEW `usuarios_info_view` AS select `u`.`id` AS `id`,concat(`u`.`nombre`,' ',`u`.`ap_paterno`,' ',`u`.`ap_materno`) AS `name`,`u`.`nombre_usuario` AS `username`,`u`.`activo` AS `activo`,`s`.`nombre` AS `sexo`,`r`.`rol` AS `rol` from ((`railway`.`sexos` `s` join `railway`.`usuarios` `u` on((`s`.`id` = `u`.`id_sexo`))) join `railway`.`roles` `r` on((`u`.`id_rol` = `r`.`id`))) order by `u`.`id`");
     }
 
     /**
